@@ -1,7 +1,7 @@
 PF Segmentation
 ===============
 
-Matlab interface of the image segmentation algorithm of
+Matlab interface for the image segmentation algorithm of
 
     Efficient Graph-Based Image Segmentation
     Pedro F. Felzenszwalb and Daniel P. Huttenlocher
