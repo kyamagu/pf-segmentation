@@ -1,7 +1,7 @@
-function [segmentation, num_segments] = pfsegment(input_image, sigma, k, min_size)
-%PFSEGMENT Image segmentation based on Pedro Felzenszwalb 2004
+function [segmentation, num_segments] = segment(input_image, sigma, k, min_size)
+%SEGMENT Image segmentation based on Pedro Felzenszwalb 2004
 % 
-%    [segmentation, num_segments] = pfsegment(input_image, sigma, k, min_size);
+%    [segmentation, num_segments] = pf.segment(input_image, sigma, k, min_size);
 %
 % Input:
 %   input_image: uint8 type H-by-W-by-3 RGB array
