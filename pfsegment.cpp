@@ -1,16 +1,17 @@
 /**
- * @file mexsegment.cpp
+ * @file pfsegment.cpp
  * @brief mex interface for Pedro Felzenszwalb's segmentation
  *
  * Usage:
- *   [imsegs] = mexsegment(img, sigma, k, min_size);
+ *   [segmentation, num_segments] = pfsegment(img, sigma, k, min_size);
  * Input:
- *        img: uint8 type H-by-W-by-3 RGB array
- *      sigma: scalar param used to smooth the input image before segmenting it
- *          k: scalar param for the threshold function
- *   min_size: param for minimum component size enforced by post-processing
+ *           img: uint8 type H-by-W-by-3 RGB array
+ *         sigma: scalar param used to smooth the input image before segmenting it
+ *             k: scalar param for the threshold function
+ *      min_size: param for minimum component size enforced by post-processing
  * Output:
- *     imsegs: double H-by-W-by-3 index array
+ *  segmentation: double H-by-W-by-3 index array
+ *  num_segments: number of segments in double scalar
  *
  * Kota Yamaguchi 2011
  */
@@ -135,6 +136,6 @@ void mexFunction( int nlhs, mxArray *plhs[],
 	
 	/* Convert image to mxArray */
 	plhs[0] = ImageToMxArray(seg.get());
-        if (nlhs > 1)
-          plhs[1] = mxCreateDoubleScalar(num_ccs);
+  if (nlhs > 1)
+    plhs[1] = mxCreateDoubleScalar(num_ccs);
 }
