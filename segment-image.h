@@ -144,8 +144,8 @@ image<int> *segment_image_int(image<rgb> *im, float sigma, float c,
         segment_id = entry->second;
       }
       else {
-        segment_ids[comp] = segment_ids.size()+1;
-        segment_id = segment_ids.size();
+        segment_id = segment_ids.size() + 1;
+        segment_ids[comp] = segment_id;
       }
       imRef(output, x, y) = segment_id;
     }
